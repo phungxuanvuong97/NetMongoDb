@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMongoDb", "NetMongoDb\NetMongoDb.csproj", "{C2DE66B9-B003-4C47-9AE6-2095220DD502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMongoDb", "NetMongoDb\NetMongoDb.csproj", "{C2DE66B9-B003-4C47-9AE6-2095220DD502}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{26982883-4491-47C5-B403-DD273311CD01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceManagement", "Example\DeviceManagement\DeviceManagement.csproj", "{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Example\Infrastructure\Infrastructure.csproj", "{BC89AD79-31B5-402A-9352-F3F87F7610B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +21,21 @@ Global
 		{C2DE66B9-B003-4C47-9AE6-2095220DD502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2DE66B9-B003-4C47-9AE6-2095220DD502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2DE66B9-B003-4C47-9AE6-2095220DD502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC89AD79-31B5-402A-9352-F3F87F7610B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC89AD79-31B5-402A-9352-F3F87F7610B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC89AD79-31B5-402A-9352-F3F87F7610B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC89AD79-31B5-402A-9352-F3F87F7610B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46B4CEC1-F52D-4EB0-BDB3-2180A24FB3BC} = {26982883-4491-47C5-B403-DD273311CD01}
+		{BC89AD79-31B5-402A-9352-F3F87F7610B7} = {26982883-4491-47C5-B403-DD273311CD01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA23153F-2185-4B4F-A9CE-4E6465AB05C6}

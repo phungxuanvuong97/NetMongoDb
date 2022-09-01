@@ -15,6 +15,7 @@ namespace NetMongoDb.Repository
     {
         private readonly IMongoDatabase mongoDatabase;
         private IMongoCollection<TEntity> mongoCollection;
+        private readonly IMongoClient mongoClient;
 
         protected IMongoCollection<TEntity> Collection
         {
@@ -35,6 +36,11 @@ namespace NetMongoDb.Repository
             }
         }
 
+        protected IMongoClient MongoClient
+        {
+            get { return mongoClient; }
+        }
+
         protected IMongoDatabase Database
         {
             get => mongoDatabase;
@@ -44,6 +50,9 @@ namespace NetMongoDb.Repository
         {
             var tenant = tenantService.GetTenantAsync().GetAwaiter().GetResult();
             MongoClient client = new MongoClient(tenant.ConnectionString);
+
+            mongoClient = client;
+
             mongoDatabase = client.GetDatabase(tenant.Database);
         }
 
@@ -51,7 +60,6 @@ namespace NetMongoDb.Repository
         {
             mongoDatabase = database;
         }
-
 
         protected virtual MongoCollectionSettings CollectionSettings()
         {
